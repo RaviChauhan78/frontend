@@ -1,0 +1,315 @@
+/* image upload & preview */
+.fileDragArea {
+    position: relative;
+    width: 100%;
+    height: 140px;
+    background-color: #3f51b512;
+    border-radius: 4px;
+    border: 1px #c4c4c4 dashed;
+}
+
+.fileDragArea input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.fileDragArea div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fileDragArea .iconDiv {
+    padding: 8px 0px;
+}
+
+.fileDragArea .fileupTxt {
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.fileDragArea img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.fileDragArea .imgPrevOuter {
+    height: 100%;
+    position: relative;
+}
+
+.fileDragArea .imgRemove {
+    height: 35px;
+    width: 35px;
+    background-color: #f44336;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0px 4px;
+    cursor: pointer;
+}
+
+/* Data tables */
+.MuiTableContainer-root.Custom_Datatable {
+    max-height: calc(100vh - 180px);
+    min-height: calc(100vh - 180px);
+}
+
+.MuiTableCell-root {
+    padding: 9px 15px !important;
+}
+
+.MuiTableBody-root .MuiTableCell-root {
+    padding: 0px 15px !important;
+}
+
+.MuiTableBody-root .MuiTableCell-root button.MuiButtonBase-root.MuiIconButton-root {
+    padding: 3px 3px;
+}
+
+.MuiTableBody-root .MuiTableRow-root {
+    height: 42px;
+}
+
+/* .pageCover {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 64px);
+} */
+
+
+
+/* Custom Checkbox */
+.CustomCheckBox label {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+.CustomCheckBox input[type=checkbox] {
+    position: relative;
+    border: 2px solid #000;
+    border-radius: 2px;
+    background: none;
+    cursor: pointer;
+    line-height: 0;
+    margin: 0 .6em 0 0;
+    outline: 0;
+    padding: 0 !important;
+    vertical-align: text-top;
+    height: 20px;
+    width: 20px;
+    -webkit-appearance: none;
+    opacity: .5;
+}
+
+.CustomCheckBox input[type=checkbox]:hover {
+    opacity: 1;
+}
+
+.CustomCheckBox input[type=checkbox]:checked {
+    background-color: #3f51b5;
+    border: 2px solid #3f51b5;
+    opacity: 1;
+}
+
+.CustomCheckBox input[type=checkbox]:before {
+    content: '';
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    width: 4px;
+    height: 10px;
+    border: solid #FFF;
+    border-width: 0 2px 2px 0;
+    margin: -1px -1px 0 -1px;
+    transform: rotate(45deg) translate(-50%, -50%);
+    z-index: 2;
+}
+
+@media only screen and (max-width: 600px) {
+    .MuiTableContainer-root.Custom_Datatable {
+        max-height: calc(100vh - 164px);
+        min-height: calc(100vh - 164px);
+    }
+}
+
+@media only screen and (min-width: 600px) {
+
+    /* width */
+    *::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    /* Track */
+    *::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    /* Handle */
+    *::-webkit-scrollbar-thumb {
+        background: #c1c1c1;
+        border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    *::-webkit-scrollbar-thumb:hover {
+        background: #adadad;
+    }
+}
+
+/* filter */
+.filterOuter {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.filterOuter.activeOpen {
+    height: fit-content;
+    max-height: 700px;
+}
+
+/* button icons */
+.btnIco {
+    font-size: 12px;
+    opacity: 0.65;
+}
+
+/* status box */
+.statusBox {
+    display: flex;
+    align-items: center;
+    padding: 0px 12px;
+    border: 1px solid #c4c4c4;
+    border-radius: 4px;
+}
+
+/* ActivityLogTBL */
+.ActivityLogTBL {
+    border-collapse: collapse;
+}
+
+.ActivityLogTBL tr td p {
+    word-break: break-all;
+}
+
+.ActivityLogTBL td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+.ActivityLogTBL th {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+.ActivityLogTBL th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+/* Csv Input */
+.CSVReaderInp {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid #c4c4c4;
+    border-radius: 6px;
+    position: relative;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    min-width: 275px;
+}
+
+.CSVReaderInp .FileNam {
+    padding: 0px 10px;
+    max-width: 200px;
+    overflow: hidden;
+    height: 20px;
+    word-break: break-all;
+}
+
+.csv-reader-input,
+.csv-reader-input input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.SampleCsv {
+    font-size: 14px;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+.SampleCsv span {
+    color: #3f51b5;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Status Colors Chips */
+
+.Status {
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+.Status.S_Green {
+    background-color: #bff5bf;
+}
+
+.Status.S_Red {
+    background-color: #ffb6b6;
+}
+
+.StatusDiv {
+    display: flex;
+    align-items: center;
+}
+
+.StatusDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 15px;
+    margin-right: 10px;
+}
+
+.StatusDot.S_Grey {
+    background-color: #cbcbcb;
+}
+
+.StatusDot.S_Orange {
+    background-color: #ff8c6a;
+}
+
+.StatusDot.S_Red {
+    background-color: #ff6060;
+}
+
+.StatusDot.S_Green {
+    background-color: #8ce769;
+}
+
+.StatusDot.S_Purple {
+    background-color: #b76aff;
+}
+
+.StatusDot.S_Blue {
+    background-color: #6ab0ff;
+}
